@@ -1,6 +1,7 @@
 import SwiftUI
 import AVFoundation
 
+import Combine // <-- Add this line
 // MARK: - 1. NETWORK & DATA MODELS
 struct SceneResponse: Codable {
     let status: String
