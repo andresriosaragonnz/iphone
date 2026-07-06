@@ -67,8 +67,7 @@ class CameraManager: NSObject, ObservableObject, AVCaptureFileOutputRecordingDel
             if !supports24FPS { continue }
             
             // Check for 10-bit format (e.g., Apple Log or HDR)
-            let is10Bit = format.supportedColorSpaces.contains(.appleLog) || format.supportedColorSpaces.contains(.hlgBT2020)
-            
+let is10Bit = format.supportedColorSpaces.contains(.appleLog) || format.supportedColorSpaces.contains(.HLG_BT2020)            
             if use10BitColor && is10Bit {
                 selectedFormat = format
                 break
